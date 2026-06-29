@@ -203,6 +203,6 @@ A versão atual contempla a estrutura inicial da aplicação, documentação, te
 
 ## Autor
 
-Desenvolvido por **Rogério Augusto Sabino**.
+Desenvolvido por **Ronaldo Augusto Sabino**.
 
 Projeto criado com foco em carreira, tecnologia, inteligência artificial e melhoria de currículos para processos seletivos.
