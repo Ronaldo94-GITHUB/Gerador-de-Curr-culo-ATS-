@@ -1,7 +1,461 @@
-<a href="https://mpago.la/2trsFqk" class="btn btn-primary" target="_blank">
-  Quero análise completa
-</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<a href="https://mpago.la/2AjBVgt" class="btn btn-primary" target="_blank">
-  Quero currículo otimizado
-</a>
+  <title>Gerador de Currículo ATS</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header span {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      line-height: 1.2;
+    }
+
+    header p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+      color: #e5e7eb;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #22c55e;
+      color: #052e16;
+    }
+
+    .btn-primary:hover {
+      background: #16a34a;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #1d4ed8;
+      margin-left: 10px;
+    }
+
+    .btn-secondary:hover {
+      background: #e5e7eb;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #475569;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 26px;
+      border-radius: 18px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .card p {
+      color: #475569;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .plan {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .plan.featured {
+      border: 2px solid #2563eb;
+      transform: scale(1.03);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: bold;
+      color: #0f172a;
+      margin: 14px 0;
+    }
+
+    .plan ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .plan li {
+      margin-bottom: 10px;
+      color: #334155;
+    }
+
+    .plan li::before {
+      content: "✅ ";
+    }
+
+    .plan a {
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .how {
+      background: #0f172a;
+      color: white;
+      border-radius: 24px;
+      padding: 35px;
+    }
+
+    .how h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .how-description {
+      color: #cbd5e1;
+      margin-bottom: 25px;
+      max-width: 800px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .step {
+      background: rgba(255,255,255,0.08);
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    .step strong {
+      display: block;
+      font-size: 28px;
+      color: #60a5fa;
+      margin-bottom: 10px;
+    }
+
+    .important-box {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }
+
+    .important-box h2 {
+      color: #0f172a;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .important-box p {
+      color: #475569;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #64748b;
+    }
+
+    @media (max-width: 900px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      .cards,
+      .pricing,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .plan.featured {
+        transform: none;
+      }
+
+      .btn-secondary {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <span>Currículo • ATS • Carreira • IA</span>
+
+    <h1>Descubra se seu currículo está alinhado com a vaga antes de se candidatar</h1>
+
+    <p>
+      Use o Gerador de Currículo ATS para entender se seu currículo está compatível com uma vaga,
+      identificar pontos de melhoria e receber uma orientação mais estratégica.
+    </p>
+
+    <a href="#planos" class="btn btn-primary">Ver planos</a>
+    <a href="#como-funciona" class="btn btn-secondary">Como funciona</a>
+  </header>
+
+  <main>
+    <section class="container">
+      <div class="section-title">
+        <h2>Por que fazer uma análise ATS?</h2>
+        <p>
+          Muitas empresas usam sistemas de triagem para organizar currículos. Um currículo bem alinhado
+          com a vaga pode aumentar suas chances de ser notado.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Score ATS</h3>
+          <p>
+            Veja uma pontuação de compatibilidade entre o currículo e a vaga desejada.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Palavras-chave</h3>
+          <p>
+            Identifique termos importantes que aparecem na vaga e que podem estar faltando no currículo.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Recomendações</h3>
+          <p>
+            Receba sugestões práticas para melhorar resumo, habilidades e experiências profissionais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="planos">
+      <div class="section-title">
+        <h2>Escolha sua análise</h2>
+        <p>
+          Comece entendendo como funciona ou solicite uma análise completa com currículo otimizado para a vaga.
+        </p>
+      </div>
+
+      <div class="pricing">
+        <div class="plan">
+          <div>
+            <span class="badge">Teste inicial</span>
+            <h3>Análise ATS Básica</h3>
+            <p class="price">R$ 0,00</p>
+
+            <ul>
+              <li>Entenda como funciona a análise ATS</li>
+              <li>Veja os planos disponíveis</li>
+              <li>Modelo inicial de orientação</li>
+              <li>Ideal para conhecer o serviço</li>
+            </ul>
+          </div>
+
+          <a href="#como-funciona" class="btn btn-primary">
+            Ver como funciona
+          </a>
+        </div>
+
+        <div class="plan featured">
+          <div>
+            <span class="badge">Mais indicado</span>
+            <h3>Análise Completa ATS</h3>
+            <p class="price">R$ 9,90</p>
+
+            <ul>
+              <li>Score ATS completo</li>
+              <li>Palavras-chave encontradas</li>
+              <li>Palavras-chave ausentes</li>
+              <li>Gaps entre currículo e vaga</li>
+              <li>Recomendações detalhadas</li>
+            </ul>
+          </div>
+
+          <a href="https://mpago.la/2trsFqk" class="btn btn-primary" target="_blank">
+            Quero análise completa
+          </a>
+        </div>
+
+        <div class="plan">
+          <div>
+            <h3>Currículo Otimizado</h3>
+            <p class="price">R$ 19,90</p>
+
+            <ul>
+              <li>Análise ATS completa</li>
+              <li>Currículo otimizado para a vaga</li>
+              <li>Resumo profissional melhorado</li>
+              <li>Habilidades organizadas</li>
+              <li>Sugestão para melhorar experiências</li>
+              <li>Entrega manual por WhatsApp ou e-mail</li>
+            </ul>
+          </div>
+
+          <a href="https://mpago.la/2AjBVgt" class="btn btn-primary" target="_blank">
+            Quero currículo otimizado
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="como-funciona">
+      <div class="how">
+        <h2>Como funciona?</h2>
+
+        <p class="how-description">
+          Após escolher um plano, você envia seu currículo e a descrição da vaga. A análise é feita com foco em
+          palavras-chave, clareza, alinhamento com a oportunidade e melhorias possíveis.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <strong>1</strong>
+            <p>Você escolhe o plano desejado.</p>
+          </div>
+
+          <div class="step">
+            <strong>2</strong>
+            <p>Após o pagamento, envia currículo e descrição da vaga.</p>
+          </div>
+
+          <div class="step">
+            <strong>3</strong>
+            <p>O currículo é analisado com foco em ATS e alinhamento com a vaga.</p>
+          </div>
+
+          <div class="step">
+            <strong>4</strong>
+            <p>Você recebe a análise ou o currículo otimizado por WhatsApp ou e-mail.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="important-box">
+        <h2>Importante</h2>
+
+        <p>
+          A proposta não é inventar experiências, cargos ou certificações.
+          O objetivo é organizar melhor as informações reais do candidato para aumentar a clareza,
+          melhorar a apresentação profissional e alinhar o currículo com a vaga desejada.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gerador de Currículo ATS — Projeto criado para carreira, tecnologia e empregabilidade.</p>
+  </footer>
+</body>
+</html>
