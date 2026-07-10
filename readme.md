@@ -76,3 +76,6 @@ gerador-curriculo-ats/
 ✅ Exportação futura em PDF/DOCX
 ✅ Projeto criado com Lovable e organizado para portfólio
 
+---
+
+
