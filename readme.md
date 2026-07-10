@@ -92,7 +92,6 @@ Contato
 💼 LinkedIn:
 https://www.linkedin.com/in/ronaldo-a-sabino-381a07213
 
-⭐ Projeto desenvolvido como prática de Back-End com Node.js e Fastify.
 
 🐙 GitHub:
 https://github.com/Ronaldo94-GITHUB
