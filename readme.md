@@ -1,3 +1,7 @@
+![Capa do Projeto](Capa.png)
+
+---
+
 # Gerador de Currículo ATS
 
 Projeto web criado para analisar a compatibilidade entre um currículo e uma descrição de vaga, simulando uma análise ATS.
