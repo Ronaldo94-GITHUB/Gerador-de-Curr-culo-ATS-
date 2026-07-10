@@ -69,6 +69,7 @@ gerador-curriculo-ats/
 ├── package.json
 └── readme.md
 
+```
 ✅ Análise de currículo com base na vaga
 ✅ Score ATS de compatibilidade
 ✅ Extração de palavras-chave
@@ -80,7 +81,6 @@ gerador-curriculo-ats/
 ✅ Exportação futura em PDF/DOCX
 ✅ Projeto criado com Lovable e organizado para portfólio
 
-```
 ---
 
 👨‍💻 Autor
